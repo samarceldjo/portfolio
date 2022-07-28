@@ -1,68 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Marcel</title>
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
 
-    <!-- FONTAWESOMME CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Marcel</title>
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- GOOGLE FONTS - POPPINS (Regular-Medium-Bold)-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="title">
-          <a href="index.html">
-            <h3>Meldjora</h3>
-          </a>
-        </div>
-        <div class="navlinks">
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="menu">
-          <img src="assets/bars.png" id="menuBtn" />
-        </div>
-      </nav>
+  <!-- FONTAWESOMME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
-      <div class="zone-hero">
-        <img src="assets/avatar-2.png" alt="Photo profile" />
-        <h1>Marcel Sadio Mara</h1>
-        <p>Développeur et Designer Web</p>
+  <!-- GOOGLE FONTS - POPPINS (Regular-Medium-Bold)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="title">
+        <a href="index.html">
+          <h3>Meldjora</h3>
+        </a>
       </div>
-    </header>
+      <div class="navlinks">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <img src="assets/bars.png" id="menuBtn" />
+      </div>
+    </nav>
 
-    <main>
-      <section>
-        <div class="about">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            mollitia maiores facere aut, doloribus, laudantium illum et
-            perspiciatis nisi provident nostrum ratione, deserunt voluptatum vel
-            recusandae culpa fugiat pariatur dolor.
-          </p>
+    <div class="zone-hero">
+      <img src="assets/avatar-2.png" alt="Photo profile" />
+      <h1>Marcel Sadio Mara</h1>
+      <p>Développeur & Designer Web</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="about">
+        <div class="row">
+          <div class="about-col avatar">
+            <img src="assets/avatar.png" alt="Photo profile" />
+          </div>
+
+          <div class="about-col discover">
+            <h4 class="small-title">Découvrez</h4>
+            <h2 class="big-title">Qui je suis</h2>
+            <p>
+              Mon nom est Marcel Sadio Mara. Je suis Développeur 
+              et Designer Web basé à Conakry, GUINEE, et je suis
+              passionné par mon travail. J'ai acquis des compétences 
+              me permettant de développeur de solides sites web.
+            </p>
+            <div class="info">
+              <div class="row">
+                <div class="info-col">
+                  <p><span>Nom : </span>Marcel Sadio Mara</p>
+                  <p><span>Tél : </span>+224 622 72 59 69</p>
+                  <p><span>Expériences : </span>1 an</p>
+                </div>
+
+                <div class="info-col">
+                  <p><span>Age : </span>28 ans</p>
+                  <p><span>Adresse : </span>Conakry, GUINEE</p>
+                  <p><span>Freelance : </span>Disponible</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOWNLOAD THE PDF -->
+            <a href="assets/CV_Marcel.pdf" class="btn-download-cv" download="CV_Marcel"
+              >Télécharger CV</a
+            >
+          </div>
         </div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>
