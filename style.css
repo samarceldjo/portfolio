@@ -4,7 +4,7 @@
     --darkGray-3: #424953;
     --mint-3: #53bb9b;
     --blueJeans-3: #4b89da;
-    --darkBlue: #282c34;
+    --darkBlue-1: #282c34;
 }
 * {
     font-family: "Poppins", sans-serif;
@@ -15,7 +15,6 @@
 nav {
     width: 100%;
     padding: 24px 16px;
-    /*box-shadow: 0 1px 8px var(--darkGray-1);*/
 }
 .title a {
     font-size: 1.25em;
@@ -64,8 +63,6 @@ nav {
     position: fixed;
     top: 24px;
     right: 16px;
-    /*box-shadow: -4px 4px 8px var(--darkGray-1);*/
-    z-index: 3;
     cursor: pointer;
 }
 #menuBtn {
@@ -107,41 +104,52 @@ header {
     color: var(--darkGray-1)
 }
 
+section {
+    padding: 64px 16px;
+    /*box-shadow: 0 4px 8px #152138;*/
+}
+section:nth-child(1n) {
+    background-color: #152138;
+}
+section:nth-child(2n) {
+    background-color: rgba(21, 33, 56, .98);
+}
+
 /*===== main =====*/
 .about .row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    background-color: var(--darkBlue);
-    padding: 16px;
 }
 .avatar {
-    flex-basis: 40%;
+    flex-basis: 35%;
     align-self: center;
 }
 .avatar img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
+    margin-bottom: 24px;
 }
 .discover {
-    flex-basis: 58%;
+    flex-basis: 63%;
 }
 .small-title {
     color: tomato;
-    letter-spacing: 1px;
+    letter-spacing: .9px;
     font-weight: normal;
     font-size: 16px;
+    text-transform: uppercase;
 }
 .big-title {
     color: #fff;
     letter-spacing: 1px;
-    margin: 4px 0;
+    margin: 4px 0 16px;
     font-size: 28px;
 }
 .big-title::after {
     content: "";
-    width: 40px;
+    width: 50px;
     height: 2px;
     background-color: tomato;
     display: block;
@@ -156,6 +164,13 @@ p {
 .info {
     border: 1px solid tomato;
     margin-top: 24px;
+    padding: 16px 24px;
+}
+.info .row {
+    align-items: flex-start;
+}
+.info-col span {
+    color: #fff;
 }
 .btn-download-cv {
     text-decoration: none;
@@ -167,4 +182,46 @@ p {
     font-size: 16px;
     letter-spacing: .8px;
     border-radius: 8px;
+}
+
+/*===== SERVICES =====*/
+.services .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.service-col {
+    flex-basis: 48%;
+    margin: 24px 0 0;
+    padding: 24px;
+    border: 1px solid tomato;
+}
+.service-col .fa-solid {
+    font-size: 56px;
+    color: tomato;
+    margin-bottom: 16px;
+}
+.services .small-title {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+
+/*========== DESKTOP ==========*/
+@media (min-width: 720px) {
+    section > div {
+        max-width: 920px;
+        margin: auto;
+    }
+    .about .row {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 928px) {
+    .info .row {
+        flex-direction: column;
+    }
 }
