@@ -64,6 +64,7 @@ nav {
     top: 24px;
     right: 16px;
     cursor: pointer;
+    z-index: 3;
 }
 #menuBtn {
     width: 20px;
@@ -106,10 +107,9 @@ header {
 
 section {
     padding: 64px 16px;
-    /*box-shadow: 0 4px 8px #152138;*/
 }
 section:nth-child(1n) {
-    background-color: #152138;
+    background-color: rgb(21, 33, 56);
 }
 section:nth-child(2n) {
     background-color: rgba(21, 33, 56, .98);
@@ -208,6 +208,61 @@ p {
     margin-bottom: 8px;
 }
 
+/*===== SKILLS =====*/
+.skills .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skill-col {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 16px;
+}
+.outer {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.5),
+                -6px -6px 10px -1px rgba(255,255,255,0.1);
+}
+.inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 6px 6px 10px -1px rgba(0,0,0,0.5),
+                inset -6px -6px 10px -1px rgba(255,255,255,0.1);
+}
+.percentage {
+    font-size: 14px;
+    font-weight: 500;
+    color: #eee;
+    text-align: center;
+}
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    animation: anim 2s linear forwards;
+}
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.circle-1 {
+    stroke-dashoffset: 70;
+}
+.circle-2 {
+    stroke-dashoffset: 141;
+}
 
 /*========== DESKTOP ==========*/
 @media (min-width: 720px) {
