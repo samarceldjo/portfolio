@@ -331,6 +331,7 @@ svg {
     text-align: center;
     margin: 16px 0;
     min-width: 230px;
+    border: 1px solid #fff;
 }
 .contact-col .fa-solid {
     color: var(--tomato);
