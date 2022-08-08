@@ -1,10 +1,8 @@
 :root {
-    --darkGray-1: #a9b1bc;
-    --darkGray-2: #646c77;
-    --darkGray-3: #424953;
-    --mint-3: #53bb9b;
-    --blueJeans-3: #4b89da;
-    --darkBlue-1: #282c34;
+    --blueJeans: #4b89da;
+    --darkBlue-1: rgb(21, 33, 56);
+    --darkBlue-2: rgba(21, 33, 56, .98);
+    --tomato: rgb(255, 99, 71);
 }
 * {
     font-family: "Poppins", sans-serif;
@@ -26,7 +24,7 @@ nav {
 .navlinks {
     width: 250px;
     height: 100vh;
-    background-color: var(--blueJeans-3);
+    background-color: var(--blueJeans);
     position: fixed;
     top: 0;
     right: -250px;
@@ -40,8 +38,8 @@ nav {
     list-style: none;
     padding: 16px 32px;
     transition: 0.5s;
-    border-top: 1px solid var(--darkGray-1);
-    border-bottom: 1px solid var(--darkGray-2);
+    border-top: 1px solid rgb(225, 225, 225, 0.4);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
 }
 .navlinks li:hover {
     padding-left: 48px;
@@ -102,28 +100,29 @@ header {
     color: #eee;
 }
 .zone-hero p {
-    color: var(--darkGray-1)
+    color: #a5a5a5;
 }
 
 section {
     padding: 64px 16px;
+    margin-top: -1px;
 }
 section:nth-child(1n) {
-    background-color: rgb(21, 33, 56);
+    background-color: var(--darkBlue-1);
 }
 section:nth-child(2n) {
-    background-color: rgba(21, 33, 56, .98);
+    background-color: var(--darkBlue-2)
 }
 
 /*===== main =====*/
 .about > .row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 .avatar {
-    flex-basis: 35%;
+    flex-basis: 50%;
     align-self: center;
 }
 .avatar img {
@@ -132,7 +131,7 @@ section:nth-child(2n) {
     margin-bottom: 24px;
 }
 .discover {
-    flex-basis: 63%;
+    flex-basis: 50%;
 }
 .small-title {
     color: tomato;
@@ -202,16 +201,15 @@ p {
     color: tomato;
     margin-bottom: 16px;
 }
-.services .small-title {
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
 
 /*===== SKILLS =====*/
 .skills > .row {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
 }
 .skill-col {
     width: 120px;
@@ -271,19 +269,189 @@ svg {
 .circle-illustrator {
     stroke-dashoffset: 124;
 }
-/*========== DESKTOP ==========*/
-@media (min-width: 720px) {
-    section > div {
-        max-width: 920px;
-        margin: auto;
-    }
-    .about .row {
+
+/*===== PORTFOLIO =====*/
+.portfolio .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.project-col {
+    width: 280px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0;
+    margin: 12px auto;
+}
+.project-col:nth-child(1) {
+    background-image: url(assets/racine-academie-mini.jpg);
+}
+.project-col:nth-child(2) {
+    background-image: url(assets/Etiquette-détergent-mini.jpg);
+}
+.project-col:nth-child(3) {
+    background-image: url(assets/Logo-ibracorp-mini.jpg);
+}
+.project-col:nth-child(4) {
+    background-image: url(assets/Etiquette-carotte-bio.jpg);
+}
+
+/* Other Projects */
+.other-projects {
+    margin: 0 16px;
+}
+.other-projects h3 {
+    color: var(--tomato);
+    font-weight: normal;
+    margin: 32px 0 8px;
+}
+.other-projects li {
+    color: #eee;
+    display: inline-block;
+}
+.other-projects li a {
+    color: #eee;
+    text-decoration: none;
+}
+.other-projects li:hover a {
+    border-bottom: 1px solid #eee;
+}
+
+/*===== CONTACT =====*/
+.contact > .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px 0;
+}
+.contact-col {
+    flex-basis: 32%;
+    text-align: center;
+    margin: 16px 0;
+}
+.contact-col .fa-solid {
+    color: var(--tomato);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.contact-col p {
+    font-size: 14px;
+}
+
+.social-media .fa-brands {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    color: #eee;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.social-media .fa-brands:hover {
+    color: #fff;
+    border-color: transparent;
+}
+.fa-facebook-f:hover {
+    background-color: #3b5998;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-linkedin-in:hover {
+    background-color: #0077b5;
+}
+.fa-instagram:hover {
+    background-color: #f0f;
+    background-image: linear-gradient(to top right, #fccc63, #cd486b, #8a3ab9);
+    background-repeat: no-repeat;
+}
+
+.formgroup {
+    width: 100%;
+}
+.formgroup input,
+textarea {
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    color: #eee;
+    padding: 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+input[type="submit"] {
+    width: auto;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+input[type="submit"]:hover {
+    background-color: var(--tomato);
+    transition: 0.5s;
+}
+
+/*===== FOOTER =====*/
+footer {
+    background-color: var(--darkBlue-2);
+    margin-top: -1px;
+}
+.footer {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+}
+.footer p {
+    color: #eee;
+    font-size: 14px;
+}
+.footer strong {
+    font-style: italic;
+    font-weight: 500;
+}
+
+/*========== TABLET ==========*/
+@media (min-width: 768px) {
+    .about > .row,
+    .services > .row,
+    .contact > .row {
         flex-direction: row;
+    }
+    .contact > .row {
+        align-items: flex-start;
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: 49%;
+    }
+    input[type="email"] {
+        float: right;
     }
 }
 
-@media (max-width: 928px) {
-    .info .row {
-        flex-direction: column;
+
+/*========== DESKTOP ==========*/
+@media (min-width: 1148px) {
+    .about,
+    .services,
+    .skills,
+    .portfolio,
+    .contact {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    .avatar {
+        flex-basis: 35%;
+    }
+    .discover {
+        flex-basis: 63%;
     }
 }
