@@ -313,10 +313,10 @@ svg {
 }
 .other-projects li a {
     color: #eee;
-    text-decoration: none;
+    cursor: pointer;
 }
 .other-projects li:hover a {
-    border-bottom: 1px solid #eee;
+    text-decoration: none;
 }
 
 /*===== CONTACT =====*/
