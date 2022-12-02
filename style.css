@@ -309,7 +309,7 @@ svg {
 }
 .other-projects li {
     color: #eee;
-    display: inline-block;
+    display: block;
 }
 .other-projects li a {
     color: #eee;
